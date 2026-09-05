@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="account-page">
+
+    <div class="account-card">
+
+        <div class="account-header">
+            <p class="section-label">WELCOME BACK</p>
+            <h1>Login to EducareSA</h1>
+            <p>
+                Access your profile and discover opportunities
+                suited to your goals.
+            </p>
+        </div>
+
+        <form class="account-form"
+              asp-controller="Account"
+              asp-action="Login"
+              method="post">
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email"
+                       name="email"
+                       placeholder="Enter your email address" />
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password"
+                       name="password"
+                       placeholder="Enter your password" />
+            </div>
+
+            <button type="submit" class="account-button">
+                Login
+            </button>
+
+        </form>
+
+        <div class="account-footer">
+            <p>
+                Don't have an account?
+                <a asp-controller="Account"
+                   asp-action="Register">
+                    Register
+                </a>
+            </p>
+        </div>
+
+    </div>
+
+</section>

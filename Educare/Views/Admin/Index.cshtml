@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container mt-5">
+
+    ```
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <div>
+            <h1>Welcome, Admin @ViewBag.FullName!</h1>
+            <p class="text-muted mb-0">
+                EducareSA Administration Dashboard
+            </p>
+        </div>
+
+        <form asp-controller="Admin"
+              asp-action="Logout"
+              method="post"
+              class="mb-0">
+
+            @Html.AntiForgeryToken()
+
+            <button type="submit" class="btn btn-danger">
+                Logout
+            </button>
+
+        </form>
+
+    </div>
+
+    <hr />
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card p-4 h-100">
+                <h3>Students</h3>
+                <p>
+                    Manage registered EducareSA students.
+                </p>
+
+                <a asp-controller="Admin"
+                   asp-action="Students"
+                   class="btn btn-primary">
+                    Manage Students
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 h-100">
+                <h3>Careers</h3>
+                <p>
+                    Add, edit and manage career information.
+                </p>
+
+                <a href="#" class="btn btn-primary">
+                    Manage Careers
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 h-100">
+                <h3>Opportunities</h3>
+                <p>
+                    Manage bursaries, internships, learnerships and other opportunities.
+                </p>
+
+                <a href="#" class="btn btn-primary">
+                    Manage Opportunities
+                </a>
+            </div>
+        </div>
+
+    </div>
+    ```
+
+</div>

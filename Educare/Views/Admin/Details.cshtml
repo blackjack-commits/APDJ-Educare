@@ -1,0 +1,60 @@
+﻿@model Educare.Models.User
+
+@{
+    ViewData["Title"] = "Student Details";
+}
+
+<section class="admin-page">
+
+    <div class="admin-header">
+
+        <p class="section-label">STUDENT INFORMATION</p>
+
+        <h1>Student Details</h1>
+
+        <p>
+            View information about this EducareSA student.
+        </p>
+
+    </div>
+
+    <div class="card p-4">
+
+        <h3>@Model.FullName</h3>
+
+        <hr />
+
+        <p>
+            <strong>User ID:</strong>
+            @Model.UserID
+        </p>
+
+        <p>
+            <strong>Full Name:</strong>
+            @Model.FullName
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            @Model.Email
+        </p>
+
+        <p>
+            <strong>Role:</strong>
+            @Model.Role
+        </p>
+
+        <p>
+            <strong>Registered:</strong>
+            @Model.CreatedAt.ToShortDateString()
+        </p>
+
+        <a asp-controller="Admin"
+           asp-action="Students"
+           class="btn btn-secondary">
+            Back to Students
+        </a>
+
+    </div>
+
+</section>

@@ -1,0 +1,238 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <p class="hero-label">EDUCATION • CAREERS • OPPORTUNITIES</p>
+
+        <h1>Your Future Starts<br />With The Right Opportunity.</h1>
+
+        <p class="hero-description">
+            Explore universities, TVET colleges, bursaries, learnerships,
+            internships and career pathways — all in one place.
+        </p>
+
+        <div class="hero-buttons">
+            <a asp-controller="Opportunities"
+               asp-action="Index"
+               class="btn btn-primary">
+                Explore Opportunities
+            </a>
+
+            <a asp-controller="Assistant"
+               asp-action="Index"
+               class="btn btn-secondary">
+                Ask EducareSA AI
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="explore-section">
+
+    <div class="section-heading">
+        <p>EXPLORE EDUCARE SA</p>
+
+        <h2>Find Your Next Step</h2>
+
+        <span>
+            Discover opportunities that can help you build your future.
+        </span>
+    </div>
+
+
+    <div class="opportunity-grid">
+
+        <!-- Universities -->
+
+        <div class="opportunity-card university-card">
+
+            <div class="card-content">
+                <h3>Universities</h3>
+
+                <p>
+                    Explore university programmes, requirements
+                    and application information.
+                </p>
+
+                <a asp-controller="Opportunities"
+                   asp-action="Universities"
+                   class="card-button">
+                    Explore
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- TVET -->
+
+        <div class="opportunity-card tvet-card">
+
+            <div class="card-content">
+                <h3>TVET Colleges</h3>
+
+                <p>
+                    Discover vocational education and training
+                    opportunities across South Africa.
+                </p>
+
+                <a asp-controller="Opportunities"
+                   asp-action="TVET"
+                   class="card-button">
+                    Explore
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Bursaries -->
+
+        <div class="opportunity-card bursary-card">
+
+            <div class="card-content">
+                <h3>Bursaries</h3>
+
+                <p>
+                    Find funding opportunities and discover
+                    their requirements and deadlines.
+                </p>
+
+                <a asp-controller="Opportunities"
+                   asp-action="Bursaries"
+                   class="card-button">
+                    Explore
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Learnerships -->
+
+        <div class="opportunity-card learnership-card">
+
+            <div class="card-content">
+                <h3>Learnerships</h3>
+
+                <p>
+                    Discover programmes that combine learning
+                    with practical workplace experience.
+                </p>
+
+                <a asp-controller="Opportunities"
+                   asp-action="Learnerships"
+                   class="card-button">
+                    Explore
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Internships -->
+
+        <div class="opportunity-card internship-card">
+
+            <div class="card-content">
+                <h3>Internships</h3>
+
+                <p>
+                    Explore opportunities designed to help
+                    students gain practical experience.
+                </p>
+
+                <a asp-controller="Opportunities"
+                   asp-action="Internships"
+                   class="card-button">
+                    Explore
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Skills -->
+
+        <div class="opportunity-card skills-card">
+
+            <div class="card-content">
+                <h3>Skills Programmes</h3>
+
+                <p>
+                    Find skills-development opportunities that
+                    can help you enter the world of work.
+                </p>
+
+                <a asp-controller="Opportunities"
+                   asp-action="Skills"
+                   class="card-button">
+                    Explore
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AI ASSISTANT SECTION -->
+
+<section class="ai-section">
+
+    <div class="ai-background"></div>
+
+    <div class="ai-content">
+
+        <p class="ai-label">EDUCARE AI ASSISTANT</p>
+
+        <h2>Not Sure What To Do After Matric?</h2>
+
+        <p>
+            Tell EducareSA about your subjects, interests and goals.
+            Our AI Assistant will help you explore possible education
+            and career pathways.
+        </p>
+
+        <a asp-controller="Assistant"
+           asp-action="Index"
+           class="ai-button">
+            Ask EducareSA
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CAREER SECTION -->
+
+<section class="career-section">
+
+    <div class="career-content">
+
+        <p>PLAN YOUR FUTURE</p>
+
+        <h2>Explore Career Pathways</h2>
+
+        <p>
+            Learn about different careers, qualifications,
+            required subjects and possible study pathways.
+        </p>
+
+        <a asp-controller="Careers"
+           asp-action="Index"
+           class="btn btn-primary">
+            Explore Careers
+        </a>
+
+    </div>
+
+</section>

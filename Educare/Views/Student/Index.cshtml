@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Student Dashboard";
+}
+
+<div class="container mt-5">
+    <!-- Dashboard Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1>Welcome, @ViewBag.FullName</h1>
+            <p class="text-muted mb-0">
+                You are successfully logged in as a Student.
+            </p>
+        </div>
+
+        <!-- Logout Button -->
+        <form asp-controller="Student"
+              asp-action="Logout"
+              method="post"
+              class="mb-0">
+            @Html.AntiForgeryToken()
+
+            <button type="submit" class="btn btn-danger">
+                Logout
+            </button>
+        </form>
+    </div>
+
+    <hr />
+
+    <!-- Dashboard Cards -->
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card p-4 h-100">
+                <h3>Career Opportunities</h3>
+                <p>
+                    Explore careers that match your interests and subjects.
+                </p>
+
+                <a href="#" class="btn btn-primary">
+                    Explore Careers
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 h-100">
+                <h3>Opportunities</h3>
+                <p>
+                    Find bursaries, learnerships, internships and study opportunities.
+                </p>
+
+                <a href="#" class="btn btn-primary">
+                    View Opportunities
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 h-100">
+                <h3>My Profile</h3>
+                <p>
+                    Manage your student profile and preferences.
+                </p>
+
+                <a href="#" class="btn btn-primary">
+                    My Profile
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

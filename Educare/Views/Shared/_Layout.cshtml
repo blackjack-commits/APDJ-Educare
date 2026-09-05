@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Educare</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Educare.styles.css" asp-append-version="true" />
+</head>
+
+        <body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="main-header">
+
+        <nav class="navbar">
+
+            <a class="brand" asp-controller="Home" asp-action="Index">
+                Educare<span>SA</span>
+            </a>
+
+            <div class="nav-links">
+
+                <a asp-controller="Home"
+                   asp-action="Index">
+                    Home
+                </a>
+
+                <div class="nav-dropdown">
+
+                    <a href="#" class="dropdown-toggle">
+                        Opportunities
+                    </a>
+
+                    <div class="dropdown-menu">
+
+                        <a asp-controller="Opportunities"
+                           asp-action="Universities">
+                            Universities
+                        </a>
+
+                        <a asp-controller="Opportunities"
+                           asp-action="TVET">
+                            TVET Colleges
+                        </a>
+
+                        <a asp-controller="Opportunities"
+                           asp-action="Bursaries">
+                            Bursaries
+                        </a>
+
+                        <a asp-controller="Opportunities"
+                           asp-action="Learnerships">
+                            Learnerships
+                        </a>
+
+                        <a asp-controller="Opportunities"
+                           asp-action="Internships">
+                            Internships
+                        </a>
+
+                        <a asp-controller="Opportunities"
+                           asp-action="Skills">
+                            Skills Programmes
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <a asp-controller="Careers"
+                   asp-action="Index">
+                    Careers
+                </a>
+
+
+                <a asp-controller="Assistant"
+                   asp-action="Index">
+                    AI Assistant
+                </a>
+
+
+                <a asp-controller="Home"
+                   asp-action="About">
+                    About
+                </a>
+
+            </div>
+
+
+            <div class="nav-actions">
+
+                <a class="login-link"
+                   asp-controller="Account"
+                   asp-action="Login">
+                    Login
+                </a>
+
+                <a class="register-button"
+                   asp-controller="Account"
+                   asp-action="Register">
+                    Register
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="main-footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>Educare<span>SA</span></h3>
+
+                <p>
+                    Helping South African matriculants
+                    discover their next opportunity.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>Explore</h4>
+
+                <a asp-controller="Opportunities"
+                   asp-action="Index">
+                    Opportunities
+                </a>
+
+                <a asp-controller="Careers"
+                   asp-action="Index">
+                    Careers
+                </a>
+
+                <a asp-controller="Assistant"
+                   asp-action="Index">
+                    AI Assistant
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>EducareSA</h4>
+
+                <a asp-controller="Home"
+                   asp-action="About">
+                    About Us
+                </a>
+
+
+                <a href="#">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 EducareSA. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+        @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Educare</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> *@
+    @* <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2026 - Educare - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

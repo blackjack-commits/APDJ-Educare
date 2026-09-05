@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Educare.Models.User>
+
+@{
+    ViewData["Title"] = "Manage Students";
+}
+
+<section class="admin-page">
+
+    <div class="admin-header">
+
+        <p class="section-label">ADMINISTRATION</p>
+
+        <h1>Manage Students</h1>
+
+        <p>
+            View and manage students registered on EducareSA.
+        </p>
+
+    </div>
+
+    <form method="get" class="admin-search">
+
+        <input type="text"
+               name="search"
+               placeholder="Search by name or email..."
+               value="@Context.Request.Query["search"]" />
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+    <div class="student-table-container">
+
+        <table class="student-table">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Registered</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="5">
+                            No students found.
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var student in Model)
+                    {
+                        <tr>
+
+                            <td>@student.UserID</td>
+
+                            <td>@student.FullName</td>
+
+                            <td>@student.Email</td>
+
+                            <td>
+                                @student.CreatedAt.ToShortDateString()
+                            </td>
+
+                            <td>
+
+                                <a asp-controller="Admin"
+                                   asp-action="Details"
+                                   asp-route-id="@student.UserID">
+                                    View
+                                </a>
+
+                            </td>
+
+                        </tr>
+                    }
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
